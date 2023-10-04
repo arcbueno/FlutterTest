@@ -2,7 +2,7 @@
 Repository to study unit testing, BLoC and Isar Database
 It's a simple To-do list app
 
-### Material I am studing
+### Study material that I am using
 [Bloc for beginners](https://medium.com/flutter-community/flutter-bloc-for-beginners-839e22adb9f5)
 
 [Guia Definitivo de BLoC no Flutter 2022](https://youtu.be/UukgrBIf3Cc?si=7pXtZJjUKV7FDPdG)
