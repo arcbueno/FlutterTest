@@ -7,6 +7,8 @@ It's a simple To-do list app
 
 [Guia Definitivo de BLoC no Flutter 2022](https://youtu.be/UukgrBIf3Cc?si=7pXtZJjUKV7FDPdG)
 
+[Isar quickstart](https://isar.dev/tutorials/quickstart.html)
+
 [Flutterando Masterclass - Teste de unidade](https://masterclass.flutterando.com.br/public/products/94222fd5-92e5-4890-8e87-455ef4346858)
 
 And many others as I need
