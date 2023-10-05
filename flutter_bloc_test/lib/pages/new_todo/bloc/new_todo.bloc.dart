@@ -5,9 +5,11 @@ import 'package:flutter_bloc_test/pages/new_todo/bloc/new_todo.state.dart';
 import 'package:flutter_bloc_test/repositories/to_do_repository.dart';
 
 class NewTodoBloc extends Bloc<NewTodoEvent, NewTodoState> {
-  final _todoRepository = ToDoRepository();
+  late final ToDoRepository _todoRepository;
 
-  NewTodoBloc() : super(const NewTodoState()) {
+  NewTodoBloc({ToDoRepository? toDoRepository})
+      : _todoRepository = toDoRepository ?? ToDoRepository(),
+        super(const NewTodoState()) {
     on<SavingTodoEvent>(_saveNewTodo);
   }
 
