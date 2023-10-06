@@ -3,21 +3,18 @@ import 'package:flutter_bloc_test/models/to_do.dart';
 import 'package:isar/isar.dart';
 
 class ToDoRepository {
-  static final ToDoRepository _singleton = ToDoRepository._internal();
+  final Isar _isar;
 
-  factory ToDoRepository() {
-    return _singleton;
-  }
+  ToDoRepository([Isar? newIsar]) : _isar = newIsar ?? isar;
 
-  ToDoRepository._internal();
-
-  Future<void> upsert(ToDo todo) async {
-    await isar.writeTxn(() async {
-      await isar.toDos.put(todo); // insert & update
+  Future<int> upsert(ToDo todo) async {
+    return await _isar.writeTxn(() async {
+      return await _isar.toDos.put(todo); // insert & update
     });
   }
 
   Future<List<ToDo>> getAll() async {
-    return await isar.toDos.where().findAll();
+    var result = await _isar.collection<ToDo>().where().findAll();
+    return result;
   }
 }
