@@ -32,6 +32,7 @@ void main() {
     });
 
     test('Success on get all empty', () {
+      // Arrange
       final repoTest = ToDoRepository(isarTest);
 
       // Act
@@ -45,10 +46,8 @@ void main() {
     test('Success on adding a new toDo', () {
       final repoTest = ToDoRepository(isarTest);
 
-      // Act
       var resultCreated = repoTest.upsert(ToDo(title: 'teste1'));
 
-      // Assert
       expect(resultCreated, completion(isA<int>()));
     });
 

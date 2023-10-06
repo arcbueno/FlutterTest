@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        key: const Key('AddTodoButton'),
         onPressed: () async {
           await Navigator.of(context).push(
             MaterialPageRoute(

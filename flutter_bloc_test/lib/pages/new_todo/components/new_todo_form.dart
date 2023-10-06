@@ -23,6 +23,7 @@ class NewToDoForm extends StatelessWidget {
             child: Column(
               children: [
                 TextField(
+                  key: const Key('TitleInputTextField'),
                   controller: titleController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -36,6 +37,7 @@ class NewToDoForm extends StatelessWidget {
                 ),
                 12.height,
                 TextField(
+                  key: const Key('DescriptionInputTextField'),
                   controller: descriptionController,
                   maxLines: null,
                   decoration: InputDecoration(
@@ -50,6 +52,7 @@ class NewToDoForm extends StatelessWidget {
                 ),
                 24.height,
                 OutlinedButton(
+                  key: const Key('SaveTodoButton'),
                   onPressed: () {
                     var success = (_formKey.currentState?.validate() ?? false);
                     if (success) {
