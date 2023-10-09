@@ -17,4 +17,10 @@ class ToDoRepository {
     var result = await _isar.collection<ToDo>().where().findAll();
     return result;
   }
+
+  Future<bool> deleteTask(int id) async {
+    return await _isar.writeTxn(() async {
+      return await _isar.toDos.delete(id);
+    });
+  }
 }
