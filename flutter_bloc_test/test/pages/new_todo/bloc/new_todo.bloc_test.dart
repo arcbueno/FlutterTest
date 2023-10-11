@@ -10,7 +10,6 @@ class ToDoRepositoryMock extends Mock implements ToDoRepository {}
 void main() {
   test('Creating ToDo with success', () {
     final repoMock = ToDoRepositoryMock();
-    // when(() => repoMock.upsert(any())).thenAnswer();
 
     final blocMock = NewTodoBloc(toDoRepository: repoMock);
     blocMock.add(SavingTodoEvent(title: ''));
